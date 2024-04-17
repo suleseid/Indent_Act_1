@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true); // Parse the URL
 
   if (parsedUrl.pathname === '/') {
-    // Student Information Endpoint
+ 
     const studentInfoPath = path.join(__dirname, 'studentInfo.html');
     fs.readFile(studentInfoPath, (err, data) => {
       if (err) {
@@ -50,7 +50,7 @@ const server = http.createServer((req, res) => {
   }
 });
 
-const port = 3000; // Use 3001 or another port if 3000 is in use
+const port = 3000; // Use 3000 on or another port like 3001 we can use.
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
